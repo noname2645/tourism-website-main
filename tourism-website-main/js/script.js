@@ -10,7 +10,7 @@ if (window.screen.width <= 1130) {
     $("#pri").on("click", function () {
         removeall();
         $("#pri").css("border", "2px solid whitesmoke");
-        $("#pri").css("border-radius", "20px");
+        $("#pri").css("border-radius", "200px");
     });
     $("#tri").on("click", function () {
         removeall();
@@ -127,6 +127,20 @@ function updateNav() {
             }
         }
     });
+}
+
+function scrollToTours() {
+    const toursSection = document.getElementById('tours');
+    if (toursSection) {
+        // Smoothly scroll to the "Tours" section
+        toursSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+        console.error('Tours section not found');
+    }
+}
+
+function pay(){
+    window.location.href="payment.html";
 }
 
 window.addEventListener("scroll", updateNav);
